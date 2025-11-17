@@ -1,5 +1,6 @@
 {% set name = "oslash" %}
 {% set version = "2.0.0" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -17,12 +18,10 @@ build:
 requirements:
   host:
     - pip
-    - pytest-runner
     - python {{ python_min }}
-    - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
-    - typing-extensions
 
 test:
   imports:
