@@ -1,18 +1,18 @@
 {% set name = "oslash" %}
-{% set version = "0.6.3" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/OSlash-{{ version }}.tar.gz
-  sha256: 868aeb58a656f2ed3b73d9dd6abe387b20b74fc9413d3e8653b615b15bf728f3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c8090331973ccab85a5266bdb125d3547d0e1d27b0990bd3bc2de2e56bef4a8c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/dbrattli/oslash
-  summary: Functors, Applicatives, And Monads in Python 
+  summary: Functors, Applicatives, And Monads in Python
   license: MIT
   # PR'd upstread to bundle in license
   license_file: LICENSE
