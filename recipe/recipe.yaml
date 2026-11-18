@@ -31,7 +31,9 @@ tests:
       imports:
         - oslash
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Functors, Applicatives, And Monads in Python
